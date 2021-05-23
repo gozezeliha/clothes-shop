@@ -1,0 +1,16 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "main.scss",
+        "_base.scss",
+        "_variables.scss",
+        "_layout.scss",
+        "_card.scss",
+        "_media.scss",
+        "_buy.scss",
+        "_buttons.scss"
+    ],
+    "names": [],
+    "file": "main.css"
+}
