@@ -9,8 +9,8 @@ const FilterList = () => {
 
     return (
         <div className="product-filters">
-            {filters.map(filter => (
-                <Filter filter={filter} />
+            {filters.map((filter, index) => (
+                <Filter key={index} filter={filter} />
             ))}
         </div>
     )

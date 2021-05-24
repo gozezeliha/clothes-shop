@@ -1,6 +1,6 @@
 const Filter = (props) => {
     return(
-        <button className="product-filters__item" value={props.filter}>{props.filter}</button>
+        <a className="product-filters__item" value={props.filter}>{props.filter}</a>
     )
 }
 

@@ -1,38 +1,118 @@
-.container{
-    max-width: 70%;
-    margin: 0 auto 3rem auto;
+.container {
+  max-width: 70%;
+  margin: 0 auto 3rem auto;
 }
 
-.main{
+.main {
+  display: flex;
+  flex-direction: column;
+  margin-top: 4rem;
+
+  .header {
     display: flex;
-    flex-direction: column;
-    margin-top: 4rem;
+    justify-content: space-between;
+    align-items: center;
+  }
 
-    .header{
+  .product-filters {
+    display: flex;
+    justify-content: space-around;
+    margin: 3rem 0;
+
+
+  }
+
+
+
+  .products-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(17rem, 1fr));
+    grid-template-rows: minmax(150px, min-content);
+    text-align: center;
+    grid-gap: 3rem;
+
+    .product-item {
+      display: flex;
+      flex-direction: column;
+      border-radius: 20px;
+      position: relative;
+
+      
+
+      &__img {
+          border-radius: 15px;
+          width: 100%;
+          height: 100%;
+      }
+
+      &__price {
+        background-color: $color-gray;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 15%;
         display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
+        flex-direction: column;
+        justify-content: center;
+        border-radius: 0 0 15px 15px;
+        transition: height .5s;
 
-    .product-filters{
-        display: flex;
-        justify-content: space-around;
-        margin: 3rem 0; 
-    }
-
-    .product-list{
-        display: grid;
-        grid-template-columns: repeat(auto-fill,minmax(17rem,1fr));
-        grid-template-rows: minmax(150px,min-content);
-        text-align: center;
-        grid-gap: 3rem;
-
-        .product-item {
-           display: flex;
-           flex-direction: column;
-           border: 1px solid black;
+        &--count {
+          display: none;
+          color: $color-yellow;
+          font-weight: bold;
+          font-size: 22px;
+          position: relative;
+          top: 0;
+          transition: all .5s;
         }
+
+        &--title{
+          font-size: 14px;
+          color: $color-yellow;
+          font-weight: bold;
+        }
+
+        &--button{
+            display: none;
+            background: $color-yellow;
+            border-radius: 5px;
+            color: $color-gray;
+            font-size: 22px;
+            font-weight: bold;
+            border: none;
+            width: 80%;
+            margin: 0 auto;
+            padding: .5rem 0;
+
+        }
+  
+      }
+
+      &:hover .product-item__price{
+        height: 100%;
+        border-radius: 15px;
+        &--title{
+          display: none;
+        }
+        &--count{
+            display: block;
+            color: white;
+            top: -30px;
+            font-size: 30px;
+        }
+        &--button{
+            display: block;
+            &:hover{
+                opacity: .8;
+            }
+        }
+      }
+
+
+
     }
     
+  }
 }
 

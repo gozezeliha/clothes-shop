@@ -9,7 +9,7 @@ const ProductsProvider = (props) => {
           {
             id: uuidv4(),
             title: "Cat Tee Black T-Shirt",
-            image: "../assets/img/10547961582846888_2.jpg",
+            image: "https://images.pexels.com/photos/3147528/pexels-photo-3147528.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
             availableSizes: ["S", "XS"],
             price: 10.9
           },
@@ -17,7 +17,7 @@ const ProductsProvider = (props) => {
           {
             id: uuidv4(),
             title: "Dark Thug Blue-Navy T-Shirt",
-            image: "../assets/img/10547961582846888_2.jpg",
+            image: "https://images.pexels.com/photos/3147528/pexels-photo-3147528.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
             availableSizes: ["M"],
             price: 29.45
           },
@@ -25,22 +25,22 @@ const ProductsProvider = (props) => {
           {
             id: uuidv4(),
             title: "Sphynx Tie Dye Wine T-Shirt",
-            image: "../assets/img/10547961582846888_2.jpg",
+            image: "https://images.pexels.com/photos/3147528/pexels-photo-3147528.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
             availableSizes: ["X", "L", "XL"],
             price: 9.0
           },
           {
             id: uuidv4(),
             title: "Short Sleeve T-Shirt",
-            image: "../assets/img/10547961582846888_2.jpg",
+            image: "https://images.pexels.com/photos/3147528/pexels-photo-3147528.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
             availableSizes: ["XS", "X", "L", "ML", "XL"],
             price: 75.0
           },
       
           {
             id: uuidv4(),
-            sku: 8552515751438644,
-            image: "../assets/img/10547961582846888_2.jpg",
+            title: "Sphynx Tie Dye Grey T-Shirt",
+            image: "https://images.pexels.com/photos/3147528/pexels-photo-3147528.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
             availableSizes: ["X", "L", "XL", "XXL"],
             price: 10.9
           },
@@ -48,7 +48,7 @@ const ProductsProvider = (props) => {
           {
             id: uuidv4(),
             title: "Sphynx Tie Dye Grey T-Shirt",
-            image: "../assets/img/10547961582846888_2.jpg",
+            image: "https://images.pexels.com/photos/3147528/pexels-photo-3147528.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
             availableSizes: ["X", "L", "XL", "XXL"],
             price: 10.9
           },
@@ -56,7 +56,7 @@ const ProductsProvider = (props) => {
           {
             id: uuidv4(),
             title: "Danger Knife Grey",
-            image: "../assets/img/10547961582846888_2.jpg",
+            image: "https://images.pexels.com/photos/3147528/pexels-photo-3147528.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
             availableSizes: ["X", "L"],
             price: 14.9
           },
@@ -64,15 +64,15 @@ const ProductsProvider = (props) => {
           {
             id: uuidv4(),
             sku: 876661122392077,
-            image: "../assets/img/10547961582846888_2.jpg",
+            image: "https://images.pexels.com/photos/3147528/pexels-photo-3147528.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
             availableSizes: ["X", "L"],
             price: 14.9
           },
       
           {
             id: uuidv4(),
-            sku: 9197907543445677,
-            image: "../assets/img/10547961582846888_2.jpg",
+            title: "Short Sleeve T-Shirt",
+            image: "https://images.pexels.com/photos/3147528/pexels-photo-3147528.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
             availableSizes: ["XL"],
             price: 25.9
           },
@@ -80,15 +80,15 @@ const ProductsProvider = (props) => {
           {
             id: uuidv4(),
             title: "Tso 3D Short Sleeve T-Shirt A",
-            image: "../assets/img/10547961582846888_2.jpg",
+            image: "https://images.pexels.com/photos/3147528/pexels-photo-3147528.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
             availableSizes: ["X", "L", "XL"],
             price: 10.9
           },
       
           {
             id: uuidv4(),
-            sku: 6090484789343891,
-            image: "../assets/img/10547961582846888_2.jpg",
+            title: "Short Sleeve T-Shirt",
+            image: "https://images.pexels.com/photos/3147528/pexels-photo-3147528.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
             availableSizes: ["XL", "XXL"],
             price: 49.9
           },
@@ -96,15 +96,15 @@ const ProductsProvider = (props) => {
           {
             id: uuidv4(),
             title: "Crazy Monkey Black T-Shirt",
-            image: "../assets/img/10547961582846888_2.jpg",
+            image: "https://images.pexels.com/photos/3147528/pexels-photo-3147528.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
             availableSizes: ["S"],
             price: 22.5
           },
       
           {
             id: uuidv4(),
-            sku: 5619496040738316,
-            image: "../assets/img/10547961582846888_2.jpg",
+            title: "Short Sleeve T-Shirt",
+            image: "https://images.pexels.com/photos/3147528/pexels-photo-3147528.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
             availableSizes: ["XL"],
             price: 18.7
           },
@@ -112,7 +112,7 @@ const ProductsProvider = (props) => {
           {
             id: uuidv4(),
             title: "Crazy Monkey Grey",
-            image: "../assets/img/10547961582846888_2.jpg",
+            image: "https://images.pexels.com/photos/3147528/pexels-photo-3147528.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
             availableSizes: ["L", "XL"],
             price: 134.9
           },
@@ -120,7 +120,7 @@ const ProductsProvider = (props) => {
           {
             id: uuidv4(),
             title: "On The Streets Black T-Shirt",
-            image: "../assets/img/10547961582846888_2.jpg",
+            image: "https://images.pexels.com/photos/3147528/pexels-photo-3147528.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
             availableSizes: ["L", "XL"],
             price: 49.0
           }

@@ -52,7 +52,7 @@ body {
   margin: 3rem 0;
 }
 
-.main .product-list {
+.main .products-list {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (minmax(17rem, 1fr))[auto-fill];
@@ -64,7 +64,7 @@ body {
   grid-gap: 3rem;
 }
 
-.main .product-list .product-item {
+.main .products-list .product-item {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -72,6 +72,88 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  border: 1px solid black;
+  border-radius: 20px;
+  position: relative;
+}
+
+.main .products-list .product-item__img {
+  border-radius: 15px;
+  width: 100%;
+  height: 100%;
+}
+
+.main .products-list .product-item__price {
+  background-color: #424242;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 15%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 0 0 15px 15px;
+  -webkit-transition: height .5s;
+  transition: height .5s;
+}
+
+.main .products-list .product-item__price--count {
+  display: none;
+  color: #F2DA00;
+  font-weight: bold;
+  font-size: 22px;
+  position: relative;
+  top: 0;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+}
+
+.main .products-list .product-item__price--title {
+  font-size: 14px;
+  color: #F2DA00;
+  font-weight: bold;
+}
+
+.main .products-list .product-item__price--button {
+  display: none;
+  background: #F2DA00;
+  border-radius: 5px;
+  color: #424242;
+  font-size: 22px;
+  font-weight: bold;
+  border: none;
+  width: 80%;
+  margin: 0 auto;
+  padding: .5rem 0;
+}
+
+.main .products-list .product-item:hover .product-item__price {
+  height: 100%;
+  border-radius: 15px;
+}
+
+.main .products-list .product-item:hover .product-item__price--title {
+  display: none;
+}
+
+.main .products-list .product-item:hover .product-item__price--count {
+  display: block;
+  color: white;
+  top: -30px;
+  font-size: 30px;
+}
+
+.main .products-list .product-item:hover .product-item__price--button {
+  display: block;
+}
+
+.main .products-list .product-item:hover .product-item__price--button:hover {
+  opacity: .8;
 }
 /*# sourceMappingURL=main.css.map */
