@@ -23,7 +23,6 @@
     .product-list{
         display: grid;
         grid-template-columns: repeat(auto-fill,minmax(17rem,1fr));
-        // grid-template-columns: 150px 150px 150px;
         grid-template-rows: minmax(150px,min-content);
         text-align: center;
         grid-gap: 3rem;
