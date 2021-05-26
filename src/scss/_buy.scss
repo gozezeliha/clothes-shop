@@ -7,7 +7,9 @@
   background-color: $color-gray;
   transition: right 0.2s;
 
-  
+  &--open{
+      right: 0rem;
+  }
 
   &__content {
     height: 100%;

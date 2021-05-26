@@ -191,6 +191,10 @@ body {
   transition: right 0.2s;
 }
 
+.buy--open {
+  right: 0rem;
+}
+
 .buy__content {
   height: 100%;
   overflow-y: scroll;
