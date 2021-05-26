@@ -63,7 +63,7 @@ const ProductsProvider = (props) => {
       
           {
             id: uuidv4(),
-            sku: 876661122392077,
+            title: "Sphynx Tie Dye Grey T-Shirt",
             image: "https://images.pexels.com/photos/1254502/pexels-photo-1254502.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
             availableSizes: ["X", "L"],
             price: 14.9
