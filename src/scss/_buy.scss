@@ -124,7 +124,15 @@
 
 .open-icon {
   position: absolute;
-  left: -5.25rem;
+  left: -10.25rem;
+  background-color: $color-black;
+  padding: 1.5rem;
+  color: $color-yellow;
+}
+
+.close-icon {
+  position: absolute;
+  left: -4.375rem;
   background-color: $color-black;
   padding: 1.5rem;
   color: $color-yellow;

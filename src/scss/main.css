@@ -317,7 +317,15 @@ body {
 
 .open-icon {
   position: absolute;
-  left: -5.25rem;
+  left: -10.25rem;
+  background-color: #272727;
+  padding: 1.5rem;
+  color: #F2DA00;
+}
+
+.close-icon {
+  position: absolute;
+  left: -4.375rem;
   background-color: #272727;
   padding: 1.5rem;
   color: #F2DA00;
