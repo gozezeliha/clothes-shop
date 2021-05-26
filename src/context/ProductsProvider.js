@@ -1,11 +1,11 @@
-import { useState,createContext } from 'react';
+import { useState,createContext,useEffect } from 'react';
 import { v4 as uuidv4 } from 'uuid';
 
 export const Context = createContext();
 
 const ProductsProvider = (props) => {
 
-    const [products] = useState([
+    const [products,setProducts] = useState([
           {
             id: uuidv4(),
             title: "Cat Tee Black T-Shirt",
@@ -143,9 +143,29 @@ const ProductsProvider = (props) => {
        setBudget(budget.filter(element => element.id !== id));
     }
 
+    const filterProducts = (value) => {
+      const sortedArray = products.sort((a,b) => a.price - b.price);
+      setProducts(products => products = sortedArray);
+      // return setProducts(sortedArray);
+    }
+
+    useEffect(() => {
+      console.log("asd");
+    }, [products])
+
     return(
-        <Context.Provider value={{products,filters,budget,totalCount,addBudget,deleteBudget}}>
+        <Context.Provider value={{
+          products,
+          filters,
+          budget,
+          totalCount,
+          addBudget,
+          deleteBudget,
+          filterProducts
+          }}>
+
             {props.children}
+
         </Context.Provider>
     )
 }
