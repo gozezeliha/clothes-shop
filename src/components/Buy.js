@@ -5,12 +5,12 @@ import { Context } from '../context/ProductsProvider';
 
 const Buy = () => {
 
-    const { budget } = useContext(Context);
+    const { budget,totalCount } = useContext(Context);
 
     return (
         <div className="buy buy--open">
-            <div className="open-icon"><i class="fas fa-shopping-cart fa-2x"></i></div>
-            {/* <div className="close-icon"><i class="fas fa-times"></i></div> */}
+            <div className="open-icon"><i className="fas fa-shopping-cart fa-2x"></i></div>
+            {/* <div className="close-icon"><i className="fas fa-times"></i></div> */}
             <div className="buy__content">
                 <div className="buy__content--header">
                     <h2>Basket</h2>
@@ -23,7 +23,7 @@ const Buy = () => {
                 <div className="buy__content--footer">
                     <div className="buy-total">
                         <h2>SUBTOTAL</h2>
-                        <span>$ 49.35</span>
+                        <span>$ {totalCount.toFixed(2)}</span>
                     </div>
                     <button  className="buy-button">
                         CHECKOUT

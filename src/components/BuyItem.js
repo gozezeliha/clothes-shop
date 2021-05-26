@@ -7,8 +7,8 @@ const BuyItem = ({item}) => {
 
     return(
         <div className="buy-item">
-                        <div onClick={() => deleteBudget(item.id)} className="buy-item__delete"><i class="fas fa-times fa-2x"></i></div>
-                        <img className="buy-item__img" src={item.image} />
+                        <div onClick={() => deleteBudget(item.id,item.price)} className="buy-item__delete"><i className="fas fa-times fa-2x"></i></div>
+                        <img className="buy-item__img" src={item.image} alt={item.title} />
                         <div className="buy-item__details">
                             <h2 className="buy-item__details--title">{item.title}</h2>
                             <p className="buy-item__details-content" >M | Front print and paisley print</p>

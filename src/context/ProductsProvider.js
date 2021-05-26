@@ -1,4 +1,4 @@
-import { useState,createContext,useEffect } from 'react';
+import { useState,createContext } from 'react';
 import { v4 as uuidv4 } from 'uuid';
 
 export const Context = createContext();
@@ -130,16 +130,21 @@ const ProductsProvider = (props) => {
 
     const [filters] = useState(["XS","S","M","ML","L","XL","XXL"]);
 
+    const [totalCount,setTotalCount] = useState(0);
+
     const addBudget = (product) => {
+        setTotalCount(totalCount => totalCount += product.price);
         setBudget([...budget,product]);
     }
 
-    const deleteBudget = (id) => {
+    const deleteBudget = (id,price) => {
+       
+       setTotalCount(totalCount => totalCount -= price);
        setBudget(budget.filter(element => element.id !== id));
     }
 
     return(
-        <Context.Provider value={{products,filters,budget,addBudget,deleteBudget}}>
+        <Context.Provider value={{products,filters,budget,totalCount,addBudget,deleteBudget}}>
             {props.children}
         </Context.Provider>
     )
