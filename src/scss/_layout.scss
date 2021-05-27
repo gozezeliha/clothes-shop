@@ -15,9 +15,31 @@
     padding: 2rem 0;
   }
 
-  .product-option__text{
-    margin-right: 2rem;
-    font-size: 1.2rem;
+  .product-count {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: $color-gray;
+  }
+
+  .product-option {
+    display: flex;
+    align-items: center;
+    &__select {
+      position: relative;
+      margin: 0 auto;
+      font-family: "Open Sans", "Helvetica Neue", "Segoe UI", "Calibri", "Arial",
+        sans-serif;
+      font-size: 18px;
+      color: #60666d;
+      padding: 0.2rem 1rem;
+    }
+
+    &__text {
+      margin-right: 2rem;
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: $color-gray;
+    }
   }
 
   .products-list {
@@ -33,12 +55,10 @@
       border-radius: 20px;
       position: relative;
 
-      
-
       &__img {
-          border-radius: 15px;
-          width: 100%;
-          height: 100%;
+        border-radius: 15px;
+        width: 100%;
+        height: 100%;
       }
 
       &__price {
@@ -51,7 +71,7 @@
         flex-direction: column;
         justify-content: center;
         border-radius: 0 0 15px 15px;
-        transition: all .5s;
+        transition: all 0.5s;
 
         &--count {
           display: none;
@@ -60,55 +80,48 @@
           font-size: 22px;
           position: relative;
           top: 0;
-          transition: all .5s;
+          transition: all 0.5s;
         }
 
-        &--title{
+        &--title {
           font-size: 14px;
           color: $color-yellow;
           font-weight: bold;
         }
 
-        &--button{
-            display: none;
-            background: $color-yellow;
-            border-radius: 5px;
-            color: $color-gray;
-            font-size: 22px;
-            font-weight: bold;
-            border: none;
-            width: 80%;
-            margin: 0 auto;
-            padding: .5rem 0;
-
+        &--button {
+          display: none;
+          background: $color-yellow;
+          border-radius: 5px;
+          color: $color-gray;
+          font-size: 22px;
+          font-weight: bold;
+          border: none;
+          width: 80%;
+          margin: 0 auto;
+          padding: 0.5rem 0;
         }
-  
       }
 
-      &:hover .product-item__price{
+      &:hover .product-item__price {
         height: 100%;
         border-radius: 15px;
-        &--title{
+        &--title {
           display: none;
         }
-        &--count{
-            display: block;
-            color: white;
-            top: -30px;
-            font-size: 30px;
+        &--count {
+          display: block;
+          color: white;
+          top: -30px;
+          font-size: 30px;
         }
-        &--button{
-            display: block;
-            &:hover{
-                opacity: .8;
-            }
+        &--button {
+          display: block;
+          &:hover {
+            opacity: 0.8;
+          }
         }
       }
-
-
-
     }
-    
   }
 }
-

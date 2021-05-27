@@ -24,7 +24,6 @@ const Header = () => {
                     <option value="highest">Highest to lowest</option>
                 </select>
             </div>
-
         </div>
     )
 }
