@@ -132,26 +132,26 @@ const ProductsProvider = (props) => {
 
     const [totalCount,setTotalCount] = useState(0);
 
+    const [isOpen,setIsOpen] = useState(false);
+
     const addBudget = (product) => {
         setTotalCount(totalCount => totalCount += product.price);
         setBudget([...budget,product]);
     }
 
     const deleteBudget = (id,price) => {
-       
        setTotalCount(totalCount => totalCount -= price);
        setBudget(budget.filter(element => element.id !== id));
     }
 
     const filterProducts = (value) => {
-      const sortedArray = products.sort((a,b) => a.price - b.price);
-      setProducts(products => products = sortedArray);
-      // return setProducts(sortedArray);
+      value === "lowest" ? setProducts([...products].sort((a,b) => a.price - b.price))
+      : setProducts([...products].sort((a,b) => b.price - a.price))
     }
 
-    useEffect(() => {
-      console.log("asd");
-    }, [products])
+    const changeStatus = (query) => {
+      query ? setIsOpen(isOpen => isOpen = false) : setIsOpen(isOpen => isOpen = true);
+    }
 
     return(
         <Context.Provider value={{
@@ -159,9 +159,11 @@ const ProductsProvider = (props) => {
           filters,
           budget,
           totalCount,
+          isOpen,
           addBudget,
           deleteBudget,
-          filterProducts
+          filterProducts,
+          changeStatus
           }}>
 
             {props.children}
