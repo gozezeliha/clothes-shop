@@ -7,14 +7,8 @@ const Buy = () => {
 
     const { budget,totalCount,isOpen,changeStatus } = useContext(Context);
     
-    const [buyClass,setBuyClass] = useState("buy");
-
-    useEffect(() => {
-        !isOpen ? setBuyClass(buyClass => buyClass = "buy buy--open") : setBuyClass(buyClass => buyClass = "buy")
-    }, [isOpen])
-
     return (
-        <div className={buyClass}>
+        <div className={!isOpen ? "buy buy--open" : "buy"}>
 
             {isOpen ? <div onClick={() => changeStatus(true)} className="open-icon"><i className="fas fa-shopping-cart fa-2x"></i></div>
             :<div onClick={() => changeStatus(false)} className="close-icon"><i className="fas fa-times fa-2x"></i></div>}

@@ -132,11 +132,12 @@ const ProductsProvider = (props) => {
 
     const [totalCount,setTotalCount] = useState(0);
 
-    const [isOpen,setIsOpen] = useState(false);
+    const [isOpen,setIsOpen] = useState(true);
 
     const addBudget = (product) => {
         setTotalCount(totalCount => totalCount += product.price);
         setBudget([...budget,product]);
+        setIsOpen(false);
     }
 
     const deleteBudget = (id,price) => {
@@ -150,7 +151,7 @@ const ProductsProvider = (props) => {
     }
 
     const changeStatus = (query) => {
-      query ? setIsOpen(isOpen => isOpen = false) : setIsOpen(isOpen => isOpen = true);
+      !query ? setIsOpen(true) : setIsOpen(false);
     }
 
     return(
